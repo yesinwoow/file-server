@@ -9,7 +9,6 @@ def human_size(b):
     units = ["B","KB","MB","GB","TB"]
     i = int(math.floor(math.log(b, 1024)))
     return f"{b / 1024**i:.1f} {units[i]}"
-
 HTML = r"""<!DOCTYPE html>
 <html lang="en">
 <head>
