@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PyDrive</title>
+</head>
+<body>
+
+<h1>Files</h1>
+
+<ul>
+  {% for file in files %}
+    <li>
+      <a href="/files/{{ file }}">
+        {{ file }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>
