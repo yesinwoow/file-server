@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html>
 <head>
   <title>PyDrive</title>
@@ -16,6 +17,47 @@
     </li>
   {% endfor %}
 </ul>
+=======
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MyStream</title>
+
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<header>
+  <h2>NETFLIX<span>.CLONE</span></h2>
+  <form>
+    <input name="search" placeholder="Search..." value="{{search}}">
+  </form>
+</header>
+
+{% for category, videos in categories.items() %}
+<div class="row">
+  <h3>{{category}}</h3>
+  <div class="scroll">
+    {% for video in videos %}
+    <div class="card" onclick="play('{{video}}')">
+      <img src="/thumb/{{video}}.jpg" onerror="this.src='https://via.placeholder.com/300x200?text=No+Image'">
+      <p>{{video}}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endfor %}
+
+<div class="player" id="player">
+  <video controls id="mainVideo">
+    <source id="videoSource" type="video/mp4">
+  </video>
+</div>
+
+<script src="/static/script.js"></script>
+>>>>>>> d99f1f1bd54e37b9ea584e80b89c45ab258906f7
 
 </body>
 </html>
